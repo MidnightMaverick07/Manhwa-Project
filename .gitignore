@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+input/
+outputs/
+temp/
+cache/
+logs/
+.env
+.DS_Store
+*.mp4
+*.wav
+*.json
+*.pdf
+# Ollama models should not be committed
+.ollama/

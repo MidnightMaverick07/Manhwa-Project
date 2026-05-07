@@ -1,0 +1,35 @@
+presets:
+  static:
+    type: "static"
+    zoom_start: 1.0
+    zoom_end: 1.0
+    pan_x: 0
+    pan_y: 0
+
+  slow_zoom_in:
+    type: "zoom"
+    zoom_start: 1.0
+    zoom_end: 1.2
+    pan_x: 0
+    pan_y: 0
+
+  slow_zoom_out:
+    type: "zoom"
+    zoom_start: 1.2
+    zoom_end: 1.0
+    pan_x: 0
+    pan_y: 0
+
+  pan_down:
+    type: "pan"
+    zoom_start: 1.1
+    zoom_end: 1.1
+    pan_x: 0
+    pan_y: 0.1
+    
+  pan_up:
+    type: "pan"
+    zoom_start: 1.1
+    zoom_end: 1.1
+    pan_x: 0
+    pan_y: -0.1

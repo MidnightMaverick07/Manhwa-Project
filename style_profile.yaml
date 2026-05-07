@@ -1,0 +1,15 @@
+name: "dramatic_suspense"
+
+narrator_personality: "dramatic, intense, analytical"
+emotional_intensity: "high"
+sentence_rhythm: "varied, punchy short sentences mixed with sweeping descriptions"
+vocabulary_style: "cinematic, engaging, slightly edgy"
+cliffhanger_frequency: "moderate"
+suspense_level: "high"
+pacing_aggression: "fast"
+narration_tone: "serious"
+
+rules:
+  - "Do not use robotic transitions like 'and then'."
+  - "Focus on the emotional weight of character choices."
+  - "Highlight power imbalances and hidden strengths."

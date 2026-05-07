@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./input:/app/input
+      - ./outputs:/app/outputs
+      - ./cache:/app/cache
+      - ./logs:/app/logs
+      - ./temp:/app/temp
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+
+volumes:
+  ollama_data:

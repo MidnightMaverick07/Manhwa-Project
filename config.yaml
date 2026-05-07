@@ -1,0 +1,41 @@
+project:
+  name: "Manhwa-to-YouTube-Recap"
+  version: "1.0.0"
+
+paths:
+  input_dir: "input/"
+  output_dir: "outputs/"
+  temp_dir: "temp/"
+  cache_dir: "cache/"
+  logs_dir: "logs/"
+
+ocr:
+  language: "en"
+  use_angle_cls: true
+  det_db_thresh: 0.3
+  det_db_box_thresh: 0.6
+  det_db_unclip_ratio: 1.5
+
+segmenter:
+  min_scene_height: 500
+  whitespace_threshold: 240 # Lightness threshold for whitespace
+  min_gap_size: 50
+  min_aspect_ratio: 0.3 # Don't allow extremely wide and thin slices
+  max_aspect_ratio: 3.0 # Don't allow extremely tall slices without splits
+  debug_dir: "debug/scene_segments/"
+
+llm:
+  endpoint: "http://localhost:11434/api/generate"
+  model: "llama3.1:8b" # Lightweight local model for MVP
+  temperature: 0.7
+  max_tokens: 1024
+
+tts:
+  model_name: "tts_models/multilingual/multi-dataset/xtts_v2"
+  speaker_wav: "reference_voice.wav" # Ensure this exists or provide a default fallback
+  language: "en"
+
+video:
+  resolution: [1920, 1080]
+  fps: 30
+  default_duration_per_scene: 15 # Seconds (used if no audio chunk is assigned)

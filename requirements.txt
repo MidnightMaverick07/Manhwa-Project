@@ -1,0 +1,12 @@
+opencv-python
+paddlepaddle
+paddleocr
+ollama
+TTS
+ffmpeg-python
+PyYAML
+pydantic
+tqdm
+PyMuPDF
+requests
+typing_extensions
